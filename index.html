@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Drag and Drop</title>
+        <style>
+            [draggable] {
+              -moz-user-select: none;
+              -khtml-user-select: none;
+              -webkit-user-select: none;
+              user-select: none;
+            }
+            
+            ul {
+                margin: 0 auto;
+                padding: 2em;
+                width: 80%;
+            }
+            
+            li {
+                border-top: 1px solid #fff;
+                border-bottom: 1px solid #ccc;
+                cursor: move;
+                list-style: none inside;
+                margin: 0;
+                padding: 0;
+            }
+            
+            li.dragging {
+                opacity: 0.25;
+                -webkit-transform: scale(0.9);
+            }
+            
+            li.over {
+                border-top-color: #000;
+                background-color: yellow;
+            }
+            
+            h1 {
+                background: transparent;
+                margin-bottom: 4px;
+                padding: 0;
+            }
+            
+            p {
+                margin-top: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>
+                <h1><a href="">Item 1</a></h1>
+                <p>
+                    For years, we've been using libraries like JQuery and Dojo to simplify complex UI elements like animations, rounded corners, and drag and drop. There's no doubt, eye-candy is important for making rich, immersive experiences on the web. But why should a library be required for common tasks that all developers are using?
+                </p>
+            </li>
+            <li>
+                <h1><a href="">Item 2</a></h1>
+                <p>
+                    For years, we've been using libraries like JQuery and Dojo to simplify complex UI elements like animations, rounded corners, and drag and drop. There's no doubt, eye-candy is important for making rich, immersive experiences on the web. But why should a library be required for common tasks that all developers are using?
+                </p>
+            </li>
+            <li>
+                <h1><a href="">Item 3</a></h1>
+                <p>
+                    For years, we've been using libraries like JQuery and Dojo to simplify complex UI elements like animations, rounded corners, and drag and drop. There's no doubt, eye-candy is important for making rich, immersive experiences on the web. But why should a library be required for common tasks that all developers are using?
+                </p>
+            </li>
+            <li>
+                <h1><a href="">Item 4</a></h1>
+                <p>
+                    For years, we've been using libraries like JQuery and Dojo to simplify complex UI elements like animations, rounded corners, and drag and drop. There's no doubt, eye-candy is important for making rich, immersive experiences on the web. But why should a library be required for common tasks that all developers are using?
+                </p>
+            </li>
+            <li class="non-draggable">
+                <h1><a href="">Item 5</a></h1>
+                <p>
+                    For years, we've been using libraries like JQuery and Dojo to simplify complex UI elements like animations, rounded corners, and drag and drop. There's no doubt, eye-candy is important for making rich, immersive experiences on the web. But why should a library be required for common tasks that all developers are using?
+                </p>
+            </li>
+            <li>
+                <h1><a href="">Item 6</a></h1>
+                <p>
+                    For years, we've been using libraries like JQuery and Dojo to simplify complex UI elements like animations, rounded corners, and drag and drop. There's no doubt, eye-candy is important for making rich, immersive experiences on the web. But why should a library be required for common tasks that all developers are using?
+                </p>
+            </li>
+            <li>
+                <h1><a href="">Item 7</a></h1>
+                <p>
+                    For years, we've been using libraries like JQuery and Dojo to simplify complex UI elements like animations, rounded corners, and drag and drop. There's no doubt, eye-candy is important for making rich, immersive experiences on the web. But why should a library be required for common tasks that all developers are using?
+                </p>
+            </li>
+        </ul>
+        <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+        <script src="jquery.dragsort.js"></script>
+        <script>
+            $('ul').dragsort({
+                dropCallback: function () {
+                    console.log('dropped some shit');
+                }
+            });
+        </script>
+    </body>
+</html>
