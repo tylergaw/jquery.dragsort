@@ -73,6 +73,8 @@
                 .not(settings.draggableEl + '.' + settings.ignoreClass)
                 .attr('draggable', true);
             
+            // Again, the delegate element has a pretty harsh selector, maybe
+            // that's an Ok trade of for the functionality?
             that.on({
                'dragstart': onDragStart,
                'dragenter': onDragEnter,
@@ -80,7 +82,8 @@
                'dragleave': onDragLeave,
                'drop': onDrop,
                'dragend': onDragEnd
-            }, settings.draggableEl);
+            }, (settings.draggableEl + ':not(' + settings.draggableEl + '.' + 
+                settings.ignoreClass + ')'));
         });
     };
     
